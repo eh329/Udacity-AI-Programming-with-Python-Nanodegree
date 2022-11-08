@@ -78,7 +78,7 @@ def print_results(results_dic, results_stats_dic, model,
         print("\nINCORRECT Dog/NOT Dog Assignments:")
         
         for k, v in results_dic.items():
-            if v[0] != v[1]:
+            if v[3] != v[4]:
                 print(v[0], v[1])
             
     if (print_incorrect_breed == True and (results_stats_dic['n_correct_dogs'] != results_stats_dic['n_correct_breed'])):
