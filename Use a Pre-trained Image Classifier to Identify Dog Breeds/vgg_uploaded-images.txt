@@ -1,0 +1,78 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                Malamute_02.jpg  label:                   malamute
+ 2 key:                   Panda_01.jpg  label:                      panda
+ 3 key:                  Hammer_01.jpg  label:                     hammer
+ 4 key:                Malamute_01.jpg  label:                   malamute
+
+     MATCH:
+
+                  Panda_01.jpg: 
+Real:                      panda   Classifier: giant panda, panda, panda bear, coon bear, ailuropoda melanoleuca
+
+               Malamute_01.jpg: 
+Real:                   malamute   Classifier: malamute, malemute, alaskan malamute
+
+ NOT A MATCH:
+
+               Malamute_02.jpg: 
+Real:                   malamute   Classifier: cougar, puma, mountain lion, painter, panther, felis concolor
+
+                 Hammer_01.jpg: 
+Real:                     hammer   Classifier:                       scabbard
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                  Panda_01.jpg: 
+Real:                      panda   Classifier: giant panda, panda, panda bear, coon bear, ailuropoda melanoleuca  
+PetLabelDog: 0  ClassLabelDog: 0
+
+               Malamute_01.jpg: 
+Real:                   malamute   Classifier: malamute, malemute, alaskan malamute  
+PetLabelDog: 0  ClassLabelDog: 1
+
+ NOT A MATCH:
+
+               Malamute_02.jpg: 
+Real:                   malamute   Classifier: cougar, puma, mountain lion, painter, panther, felis concolor  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                 Hammer_01.jpg: 
+Real:                     hammer   Classifier:                       scabbard  
+PetLabelDog: 0  ClassLabelDog: 0
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  0  N NotDog Images:  4 
+Pct Corr dog:   0.0 Pct Corr NOTdog:  75.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  1  N NotDog Images:  4 
+Pct Corr dog:   0.0 Pct Corr NOTdog:  75.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   0
+N Not Dog Images    :   4
+ 
+0.0
+75.0
+0.0
+50.0
+
+INCORRECT Dog/NOT Dog Assignments:
+malamute cougar, puma, mountain lion, painter, panther, felis concolor
+panda giant panda, panda, panda bear, coon bear, ailuropoda melanoleuca
+hammer scabbard
+malamute malamute, malemute, alaskan malamute
+
+** Total Elapsed Runtime: 0:0:3
